@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Mapa da Queima de Gordura</title>
+    <title>Angela Fonse - MQG</title>
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Roboto:wght@400;500;600;700;800&amp;family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">
@@ -451,7 +451,9 @@
             </div>
 
             <!-- VSL -->
-            <div style="position:relative;padding-top:56.25%;"><iframe id="panda-7e3199c5-53ed-43ad-83e0-fdebf1332779" src="https://player-vz-49784e87-786.tv.pandavideo.com.br/embed/?v=7e3199c5-53ed-43ad-83e0-fdebf1332779&preload=false" style="border:none;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="100%" height="100%" fetchpriority="high"></iframe></div>
+                                                                                         
+              <div style="position:relative;padding-top:56.20608899297424%;"><iframe id="panda-2f08ae0a-c715-4ae8-9aeb-c24c8b82dfdc" src="https://player-vz-28d85c9b-e40.tv.pandavideo.com.br/embed/?v=2f08ae0a-c715-4ae8-9aeb-c24c8b82dfdc" style="border:none;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="100%" height="100%" fetchpriority="high"></iframe></div>                                                                           
+                                                                                         
             <!-- VSL -->
 
             <div class="description-16578141835486qxbNr">
@@ -541,7 +543,7 @@
                         }
                     }
                 </style>
-                <a href="https://pay.kiwify.com.br/dtaXUG1" target="_blank" class="btn button-pWyRmY6545268-element zooming">
+                <a href="https://pay.kiwify.com.br/teYi6pZ" target="_blank" class="btn button-pWyRmY6545268-element zooming">
                     SIM, EU QUERO AUMENTAR MINHA TEMPERATURA INTERNA!</a>
             </div>
             <div class="hyperlink-1657814165233XBbbd5 panda">
@@ -568,7 +570,7 @@
                         }
                     }
                 </style>
-                <a class="hyperlink-1657814165233XBbbd5-element" href="https://pay.kiwify.com.br/dtaXUG1" target="_blank" rel="nofollow">
+                <a class="hyperlink-1657814165233XBbbd5-element" href="https://pay.kiwify.com.br/teYi6pZ" target="_blank" rel="nofollow">
                     <u>Quero começar agora!<u>
 </u></u>
                 </a><u><u>
@@ -704,7 +706,7 @@
                 </style>
                 <footer class="footer-1657814831958Q4sQ3C-element">
                     <br>
-                    <p><strong>Copyright 2023 – Mapa da queima de gordura®</strong></p>
+                    <p><strong>Copyright 2023 – Angela Fonseca®</strong></p>
                     <p style="margin-top:4px;">Todos os direitos reservados</p>
                     <div style="display:flex;align-items:center;justify-content:center;margin-top:24px;">
                         <a id="t" style="margin-right:12px" href="#">
@@ -727,6 +729,50 @@
         }, false);
     </script>
 
+ <style>
+    .panda {
+        display: none
+    }
+</style>
+<script>
+    const SECONDS_TO_DISPLAY = 1316;
+    const CLASS_TO_DISPLAY = 'panda';
+    const IFRAME_ID = 'panda-2f08ae0a-c715-4ae8-9aeb-c24c8b82dfdc'
+    const API_ENDPOINT = 'https://player.pandavideo.com.br/api.v2.js'
+
+    if(!document.querySelector(`script[src='${API_ENDPOINT}']`)) {
+        let s = document.createElement('script');
+        s.src = API_ENDPOINT;
+        s.async = true;
+        document.head.appendChild(s);
+    }
+
+    window.pandascripttag = window.pandascripttag || [];
+    window.pandascripttag.push(function () {
+        const p = new PandaPlayer(IFRAME_ID , {
+            onReady() {
+                const el = document.querySelectorAll(`.${CLASS_TO_DISPLAY}`);
+                p.onEvent(e => {
+                const type = e.message
+                if(type === 'panda_timeupdate'){
+                    const { currentTime, isMutedIndicator } = e;
+                    if (isMutedIndicator) return;
+                    if (currentTime < SECONDS_TO_DISPLAY) {
+                        el.forEach(e => {
+                            e.style.display = 'none'
+                        })
+                    } else if (currentTime > SECONDS_TO_DISPLAY) {
+                        el.forEach(e => {
+                            e.style.display = 'block'
+                        })
+                    }
+                }
+                })
+            }
+        });
+    })
+</script>                                              
+                                               
     <script>
         document.onkeypress = function(event) {
             event = (event || window.event);
